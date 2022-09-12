@@ -1,0 +1,89 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="page-container">
+        <section class="picture-section">
+        </section>
+
+    <div class="header-body">
+    <div class="header"> 
+        <p> This is the Library Project. </p>
+        <p> Click the "Add a Book" button If You Want to Add a New Book to the Library </p>
+        <button id="openForm"> Add a book </button>
+    </div>
+
+   <div class="library-body">
+     <div class="book-info">
+        <div class="book-alias"> Author of the Book </div>
+        <div class="book-alias"> Title of the Book </div>
+        <div class="book-alias"> Number of Pages </div>
+        <div class="book-alias"> Read Status </div>
+        <div class="book-alias"> Remove the book </div>
+        <div class="book-alias"> Change Read Status </div>
+    
+
+        <div class="books" data-index-number = "1"> J.R.R. Tolkien </div>
+        <div class="books" data-index-number = "1"> The Hobbit </div>
+        <div class="books" data-index-number = "1"> 295 pages</div>
+        <div class="books" data-index-number = "1" data-columns = "1"> Not read yet </div>
+        <button class="remove" data-index-number = "1"> &times; </button>
+        <div class="change" data-index-number = "1"> Read or Not ? </div>
+
+        <div class="books" data-index-number = "2" > Albert Camus </div>
+        <div class="books" data-index-number = "2"> The Outsider </div>
+        <div class="books" data-index-number = "2"> 176 pages </div>
+        <div class="books" data-index-number = "2" data-columns = "2"> Read </div>
+        <button class="remove" data-index-number = "2"> &times; </button>
+        <div class="change" data-index-number = "2"> Read or Not ? </div>
+
+    </div>
+    </div>
+
+    <form action="" class="BookDisplay">
+        <div class="container">
+        <div class="form-header">
+        <h1> Book Information </h1>
+        <button class="closeform"> &times; </button>
+
+        </div>
+
+            <input type="text" name="" id="Author" placeholder="Book Author" required>
+            <input type="text" name="" id="Title" placeholder="Book Title" required>
+            <input type="number" name="" id="Pages" placeholder="Number of pages" required>
+        
+        <div> 
+
+            <label for="read-status"> Have you Read the book ?</label>
+            <input type="checkbox" name="" id="read-status" required>
+        </div>
+        
+        </div>
+        
+        <button type="submit" class="sub"> Submit The Book  </button>
+      </form>
+
+
+
+
+    </div>
+
+    </div>
+
+    <div id="overlay"> </div>
+
+
+
+
+
+
+
+<script src="script.js"></script>
+</body>
+</html>

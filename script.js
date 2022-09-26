@@ -149,7 +149,6 @@ function displayLibrary() {
     myChange.addEventListener('click', function() {
 
         a = myChange.dataset.indexNumber;
-        console.log(a);
     
        const myReading = document.querySelector(`[data-columns= '${a}']`);
     
@@ -212,8 +211,7 @@ const myChange = document.querySelectorAll('.change');
 myChange.forEach(change => change.addEventListener('click', function() {
 
     a = change.dataset.indexNumber;
-    console.log(a);
-    console.log("zab")
+
     
    const myReading = document.querySelector(`[data-columns= '${a}']`);
 

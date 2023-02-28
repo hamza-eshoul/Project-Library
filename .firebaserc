@@ -1,0 +1,8 @@
+{
+  "projects": {
+    "default": "library-app-b2663",
+    "myLibrary": "library-app-b2663"
+  },
+  "targets": {},
+  "etags": {}
+}

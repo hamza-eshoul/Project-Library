@@ -1,0 +1,137 @@
+/* General */
+
+* {
+  margin: 0px;
+  padding: 0px;
+  --main-color: #252529;
+  --secondary-color: #b90415;
+}
+
+/* picture-section */
+
+/* header */
+
+.header {
+  background-color: var(--main-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  color: #ffffff;
+  padding: 20px;
+}
+
+.header p {
+  font-size: 20px;
+  font-family: sans-serif;
+}
+
+#openForm,
+.signIn {
+  margin: 0px;
+  margin-bottom: 10px;
+  background-color: var(--secondary-color);
+  color: #ffffff;
+  font-size: 16px;
+  padding: 14px;
+  border-radius: 0px;
+  font-family: "PT Sans", sans-serif;
+}
+
+/* Form */
+
+.bookDisplay {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border: 3px solid var(--secondary-color);
+  border-radius: 20px;
+  color: black;
+  width: 400px;
+  height: 370px;
+  position: fixed;
+  top: 40%;
+  left: 60%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 200ms ease-in-out;
+  z-index: 10;
+}
+
+.bookDisplay.active {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+#overlay {
+  position: fixed;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+  transition: 200ms ease-in-out;
+}
+
+#overlay.active {
+  pointer-events: all;
+  opacity: 1;
+}
+
+input[type="text"],
+input[type="number"] {
+  width: 180px;
+  border: 2px;
+  border: red;
+}
+
+/* Book Info */
+
+.book-info {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  margin: 0px 20px 20px 20px;
+  place-items: center;
+  padding: 20px;
+  gap: 10px;
+}
+
+.book-alias {
+  border: 2px solid var(--secondary-color);
+  margin: 10px;
+  text-align: center;
+  background-color: var(--main-color);
+  color: whitesmoke;
+  font-size: 1.3em;
+  width: 60%;
+  height: 70%;
+  border-radius: 20px;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.remove {
+  font-size: 2em;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 5px;
+  padding: 3px;
+  outline: none;
+  border: none;
+  background: none;
+}
+
+.library-body {
+  background-image: url(images/showcase.jpg);
+  background-size: cover;
+  background-position: center;
+  height: calc(100% - 212px);
+}

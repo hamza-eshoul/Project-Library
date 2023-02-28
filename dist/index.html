@@ -1,0 +1,142 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style type="text/tailwindcss">
+      @layer components {
+        .bookInfo {
+          @apply flex items-center justify-center border-2 border-black rounded-lg bg-white text-lg p-2 w-36;
+        }
+        .change {
+          @apply bookInfo cursor-pointer;
+        }
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <div class="flex h-screen">
+      <div class="w-[30%] h-full">
+        <img src="images/section-bg.jpg" class="object-cover w-full h-full" />
+      </div>
+      <div class="header-body">
+        <div class="header">
+          <p>This is the Library Project.</p>
+          <p>
+            Click the "Add a Book" button If You Want to Add a New Book to the
+            Library
+          </p>
+          <div class="flex gap-3 w-full justify-center">
+            <button id="openForm" class="pr-20">Add a book</button>
+            <div class="w-14 h-14 flex gap-3" id="userInfo">
+              <img
+                src="images/placeholder-image.jpeg"
+                class="object-cover w-full h-full rounded-xl"
+                id="userImage"
+              />
+              <p id="userName"></p>
+            </div>
+            <button
+              class="signIn flex gap-3 justify-center items-center hover:bg-red-500 py-2"
+              id="signInBtn"
+            >
+              <i class="fa fa-google text-2xl"> </i>
+              <p>Sign In With Google</p>
+            </button>
+            <button class="hidden signIn hover:bg-red-500" id="signOut">
+              Sign Out
+            </button>
+          </div>
+        </div>
+
+        <div class="library-body">
+          <div class="book-info">
+            <div class="book-alias">Author of the Book</div>
+            <div class="book-alias">Title of the Book</div>
+            <div class="book-alias">Number of Pages</div>
+            <div class="book-alias">Read Status</div>
+            <div class="book-alias">Remove the book</div>
+            <div class="book-alias">Change Read Status</div>
+
+            <div class="bookInfo" data-index-number="1">J.R.R. Tolkien</div>
+            <div class="bookInfo" data-index-number="1">The Hobbit</div>
+            <div class="bookInfo" data-index-number="1">295 pages</div>
+            <div class="bookInfo" data-index-number="1" data-columns="1">
+              Not read yet
+            </div>
+            <button class="remove" data-index-number="1">&times;</button>
+            <div class="change" data-index-number="1">Read or Not ?</div>
+
+            <div class="bookInfo" data-index-number="2">Albert Camus</div>
+            <div class="bookInfo" data-index-number="2">The Outsider</div>
+            <div class="bookInfo" data-index-number="2">176 pages</div>
+            <div class="bookInfo" data-index-number="2" data-columns="2">
+              Read
+            </div>
+            <button class="remove" data-index-number="2">&times;</button>
+            <div class="change" data-index-number="2">Read or Not ?</div>
+          </div>
+        </div>
+
+        <form action="" class="BookDisplay" novalidate>
+          <div class="flex flex-col outline outline-1 rounded-lg py-1">
+            <div class="flex gap-3 border-b-2 border-black w-full p-2">
+              <h1 class="text-3xl font-bold px-2">Book Information</h1>
+              <button class="closeform text-2xl font-bold">&times;</button>
+            </div>
+
+            <div class="flex flex-col gap-3 p-4 items-center">
+              <input
+                type="text"
+                name=""
+                id="Author"
+                placeholder="Book Author"
+                required
+                class="outline outline-1 rounded-md p-1"
+              />
+              <input
+                type="text"
+                name=""
+                id="Title"
+                placeholder="Book Title"
+                required
+                class="outline outline-1 rounded-md p-1"
+              />
+              <input
+                type="number"
+                name=""
+                id="Pages"
+                min="10"
+                placeholder="Number of pages"
+                required
+                class="outline outline-1 rounded-md p-1"
+              />
+              <div>
+                <label for="read-status"> Have you Read the book ?</label>
+                <input type="checkbox" name="" id="read-status" required />
+              </div>
+            </div>
+          </div>
+
+          <button
+            type="submit"
+            class="flex border border-1 border-black rounded-lg justify-center items-center bg-red-600 text-white p-3 hover:bg-red-400"
+          >
+            Submit The Book
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <div id="overlay"></div>
+
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
